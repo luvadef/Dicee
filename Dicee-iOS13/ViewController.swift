@@ -18,15 +18,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        getRandomValue()
     }
 
     @IBAction func rollButton(_ sender: UIButton) {
-        diceImageView1.image = rollValues[getRandomValue()]
-        diceImageView2.image = rollValues[getRandomValue()]
+        getRandomValue()
     }
     
-    func getRandomValue() ->Int{
-        return Int.random(in: 0...5)
+    func getRandomValue(){
+        diceImageView1.image = rollValues.randomElement()
+        diceImageView2.image = rollValues.randomElement()
     }
     
 }
