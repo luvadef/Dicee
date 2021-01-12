@@ -26,8 +26,8 @@ class ViewController: UIViewController {
     }
     
     func getRandomValue(){
-        diceImageView1.image = rollValues[Int.random(in: 0..<5)]
-        diceImageView2.image = rollValues[Int.random(in: 0..<5)]
+        diceImageView1.image = rollValues[Int.random(in: 0...5)]
+        diceImageView2.image = rollValues[Int.random(in: 0...5)]
     }
     
 }
